@@ -1,0 +1,5 @@
+server:
+  port: 9000
+spring:
+  thymeleaf:
+    cache: false     #\u7981\u7528thymeleaf\u7684\u7F13\u5B58

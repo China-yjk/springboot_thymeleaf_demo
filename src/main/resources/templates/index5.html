@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>index5</title>
+    <link href="../static/pages-cart.css" th:href="@{/pages-cart.css}">
+</head>
+<body>
+
+<!--日期格式化-->
+<span th:text="${#dates.format(date,'yyyy年MM月dd日 hh:mm:ss')}"></span><br>
+
+<!--数字格式化-->
+<span th:text="${#numbers.formatDecimal(num,1,2)}"></span>
+<br><!--参数2：表示整数至少保留几位  参数3：表示小数点后保留几位-->
+
+<!--字符串格式化-->
+<!-- # 这里的含义是 如果 atc.text 这个变量多余200个字符，后面显示... -->
+<span th:text="${#strings.abbreviate(str,60)}"></span><br>
+<!-- 截取字符串，指定长度 -->
+<span th:text="${#strings.substring(str,1,20)}"></span><br>
+<span th:if="${#strings.isEmpty(str)}">该字符串为空</span>
+
+</body>
+</html>
